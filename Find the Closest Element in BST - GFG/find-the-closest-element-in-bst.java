@@ -102,15 +102,15 @@ class Solution {
         if (root == null)
             return Integer.MAX_VALUE;
 
-        // If the current node value is equal to K, the minimum difference is 0
+      
         if (root.data == K)
             return 0;
 
-        // If the current node value is greater than K, the minimum difference can only be in the left subtree
+       
         if (root.data > K)
             return Math.min(Math.abs(K - root.data), minDiff(root.left, K));
 
-        // If the current node value is smaller than K, the minimum difference can only be in the right subtree
+       
         if (root.data < K)
             return Math.min(Math.abs(K - root.data), minDiff(root.right, K));
 
